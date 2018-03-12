@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Detalles</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="icon" href="../../favicon.png" type="image/x-icon"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+	</head>
+	<body>
+		<div id="page-wrapper" class="outPage">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a class="transition" href="projects.html"><i class="fa fa-arrow-circle-left"></i>&nbsp;&nbsp;Detalles</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="../">Home</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>---</h2>
+							<p>-----</p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<a class="image fit">
+									<div class="callbacks_container">
+									    <ul class="rslides" id="slider4">
+									        <li>
+									        	<img src="" alt="P1_S0">
+									         	<p class="caption">Login</p>
+									        </li>
+									        <li>
+									          	<img src="" alt="P1_S1">
+									          	<p class="caption">Layout Principal</p>
+									        </li>
+									        <li>
+									          	<img src="" alt="P1_S2">
+									          	<p class="caption">Checar Entrada</p>
+									        </li>
+									        <li>
+									          	<img src="" alt="P1_S3">
+									          	<p class="caption">Presentaciones</p>
+									        </li>
+									    </ul>
+								    </div>
+								</a>
+								<h3>Descripción</h3>
+								<p class="d1">--</p>
+								
+								<p class="d2">--</p>
+
+								<ul class="caracts">
+									
+								</ul>
+							</section>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://twitter.com/Amicus_Mark" class="transition icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/AmicusDeMexicoSaDeCv" class="transition icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/amicus_marketing" class="transition icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/amicusmarketing" class="transition icon alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Copyright Amicus Marketing S.A. de C.V. 2016.</li><li>Diseño y Desarrollo: <a class="transition" href="amicus-marketing.com">AMK</a></li>
+					</ul>
+					
+				</footer>
+		</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/plugins.js"></script>
+			<script src="../../assets/js/transitions.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/responsiveslides.min.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					var data = JSON.parse(localStorage.getItem("json"));
+					window.addEventListener('load', function(){
+						$(".wrapper header h2").html(data.Nombre);
+						$(".wrapper header p").html(data.Tipo);
+						$(".wrapper div section p.d1").html(data.Descripcion);
+						$(".wrapper div section p.d2").html(data.Objetivo);
+						$(".caracts").append('<li>Plataformas: '+data.Plataforma+'</li>');
+						$(".caracts").append('<li>Empresa: '+data.Empresa+'</li>');
+						$(".caracts").append('<li>Peso: '+data.Peso+'</li>');
+						$(".caracts").append('<li>Especificaciones <ul></ul></li>');
+						$(".caracts ul").append('<li>100MB a 200MB minimos de espacio en disco</li>');
+						$(".caracts ul").append('<li>GPS integrado</li>');
+						$(".caracts ul").append('<li>Amdroid Lolipop en adelante</li>');
+						$(".caracts ul").append('<li>Camara</li>');
+					});
+
+					$("#header #logo a.transition").off("click").on("click", function(){
+						localStorage.removeItem("json");
+					});
+
+					$('.wrapper div section a .callbacks_container .rslides li').each(function(index, el) {
+						$(this).find("img").attr("src",data.Proyecto+"/"+data.Capturas[index]);
+					});
+					
+					$("#slider4").responsiveSlides({
+				        auto: false,
+				        pager: false,
+				        nav: true,
+				        speed: 500,
+				        namespace: "callbacks",
+				        before: function () {
+				          
+				        },
+				        after: function () {
+
+				        }
+				    });
+
+				    $("body").css("display", "none");
+			        $("body").fadeIn(1000);
+				});
+			</script>
+
+	</body>
+</html>

@@ -1,0 +1,16 @@
+{
+	"Proyecto":[
+		{
+			"Proyecto":"../assets/proyectos/proyecto_2/",
+			"Nombre":"FastLearning",
+			"Author":"Rodrigo Hernandez",
+			"Empresa":"Amicus Marketing",
+			"Peso":"23.58MB",
+			"Plataforma":"Android",
+			"Descripcion":"Es un software desarrollado para cubrir las necesidades de comunicación interna de las empresas, brindando un método alternativo para llevar a cabo una correcta coordinación de personal en campo, así como un mayor control de sus operaciones comerciales.",
+			"Objetivo":"Dicho software tiene como objetivo primordial proveer  flujo de información en tiempo real, así como establecer una nueva estructura de negocios mediante la modalidad de coordinación de personal vía remota. El sistema (SCP) busca garantizar una operación sana, asegurando un constante flujo de almacenamiento y control de información de sus operaciones comerciales en distintas zonas de la república mexicana. Por medio de nuestra App, previamente instalada en el dispositivo móvil (Smartphone), conectamos a personal en campo (promotores, demostradores, etc.) con Administradores del sistema.",
+			"Capturas":["P2_S0.png", "P2_S1.png", "P2_S2.png","P2_S3.png"],
+			"Tipo":"Mobile App"
+		}
+	]
+}
