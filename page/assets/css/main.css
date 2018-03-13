@@ -2506,6 +2506,7 @@
 		display: inline-block;
 		position: relative;
 		overflow: hidden;
+		height: 50vh;
 	}
 
 		.image:before {
@@ -3806,7 +3807,7 @@ video{
 	border: 0;
 	top: 0;
 	right: 0;
-	z-index: 1;
+	z-index: 0;
 	display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -3826,10 +3827,6 @@ video{
 	@media screen and (max-width: 1680px) {
 
 		/* Basic */
-			.ml4{
-				display:none;
-			}
-
 			body, input, select, textarea {
 				font-size: 13pt;
 			}
@@ -4093,9 +4090,9 @@ video{
 					height: auto;
 				}
 				.left-column video{
-					margin-left: 10px;
-					width: 95%;
-					height: 355px;
+					top: -46px;
+					position: absolute;
+					width: 55%;
 				}
 				.spotlight .image.main {
 					max-height: 60vh;
@@ -4322,11 +4319,16 @@ video{
 			}
 
 		/* Footer */
+		/*Image*/
+
+			.image{
+				height: 100vh;
+			}
 
 			#footer {
 				padding: 3.25em 1.5em;
 			}
-			/*tabs*/
+		/*tabs*/
 
 			#four.container header ul.tabs {
 				margin: 0 0 4.8rem 0;
@@ -4350,22 +4352,21 @@ video{
 				height: 100%;
 			}
 			.right-column #device{
-				top:10px;
+				top: -15.2em;
 			}
 
 	}
 
 	@media only screen and (max-width:600px) {
 		.left-column{
-				background-attachment: scroll;
-				height: auto;
-			}
-			.left-column video{
-				margin-top: 10px;
-				margin-left: 10px;
-				width: 95%;
-				height: 255px;
-			}
+			background-attachment: scroll;
+			height: auto;
+		}
+		.left-column video{
+			margin-left: 10px;
+			width: 95%;
+			height: 255px;
+		}
 		#four.container header ul.tabs {
 			margin: 0 0 3.6rem 0;
 		}
@@ -4385,12 +4386,13 @@ video{
 			height: auto;
 		}
 		.left-column video{
-			margin-top: 10px;
 			margin-left: 10px;
 			width: 95%;
 			height: 255px;
 		}
-		
+		.ml4{
+			font-size: 2.5em;
+		}
 	}
 
 /* XSmall */
@@ -4413,10 +4415,11 @@ video{
 					height: auto;
 				}
 				.left-column video{
-					margin-top: 10px;
 					margin-left: 10px;
 					width: 95%;
 					height: 255px;
+					top: -46px;
+					position: initial;
 				}
 			.right-column{
 				background-attachment: scroll;
@@ -4528,7 +4531,6 @@ video{
 				height: auto;
 			}
 			.left-column video{
-				margin-top: 10px;
 				margin-left: 10px;
 				width: 95%;
 				height: 200px;
