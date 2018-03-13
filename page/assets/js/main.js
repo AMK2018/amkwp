@@ -248,6 +248,7 @@
 				});
 			
 			var objects = $(".obj");
+			var $video = $('video');
 
 			objects._parallax().each(function(){
 				var $this = $(this),
@@ -287,13 +288,25 @@
 								mode:		mode,
 								top:		top,
 								bottom:		bottom,
-								initialize:	function(t) { $this.addClass('inactive'); },
-								terminate:	function(t) { $this.removeClass('inactive'); },
-								enter:		function(t) { $this.removeClass('inactive'); },
+								initialize:	function(t) { 
+									$this.addClass('inactive'); 
+									$video[0].pause();
+								},
+								terminate:	function(t) { 
+									$this.removeClass('inactive'); 
+									$video[0].play();
+								},
+								enter:		function(t) { 
+									$this.removeClass('inactive'); 
+									$video[0].play();
+								},
 
 								// Uncomment the line below to "rewind" when this spotlight scrolls out of view.
 
-								leave:	function(t) { $this.addClass('inactive'); }
+								leave:	function(t) { 
+									$this.addClass('inactive');
+									$video[0].pause();
+								}
 
 							});
 
